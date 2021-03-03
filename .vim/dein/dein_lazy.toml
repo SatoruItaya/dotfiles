@@ -1,0 +1,6 @@
+[[plugins]]
+repo = 'hashivim/vim-terraform'
+on_ft = ['tf']
+repo = 'fatih/vim-go'
+repo = 'davidhalter/jedi-vim'
+repo = 'nvie/vim-flake8'
