@@ -20,9 +20,9 @@ if dein#load_state(s:dein_dir)
  call dein#begin(s:dein_dir)
 
  " .toml file
- let g:rc_dir = expand('~/.vim/dein') 
- let s:toml = g:rc_dir . '/dein.toml'
- let s:lazy_toml = g:rc_dir . '/dein_lazy.toml' 
+ let s:rc_dir = expand('~/.vim/dein') 
+ let s:toml = s:rc_dir . '/dein.toml'
+ let s:lazy_toml = s:rc_dir . '/dein_lazy.toml' 
 
  " read toml and cache
  call dein#load_toml(s:toml, {'lazy': 0})
@@ -37,6 +37,14 @@ endif
 if dein#check_install()
  call dein#install()
 endif
+
+" plugin remove check {{{
+let s:removed_plugins = dein#check_clean()
+if len(s:removed_plugins) > 0
+  call map(s:removed_plugins, "delete(v:val, 'rf')")
+  call dein#recache_runtimepath()
+endif
+" }}}
 
 " add molokai
 call dein#add('tomasr/molokai')
