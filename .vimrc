@@ -220,23 +220,3 @@ augroup python_auto_lint
   autocmd BufWrite *.py :call Autopep8()
   autocmd BufWritePost *.py call flake8#Flake8()
 augroup END
-
-"===================================
-
-"============ plugins ==============
-
-"vim-terraform
-let g:terraform_align=1
-let g:terraform_fold_sections=0
-let g:terraform_fmt_on_save=1
-
-"docker
-let g:docker_plugin_version_check = 0
-
-"go-vim
-let g:go_highlight_functions = 1
-let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
-let g:go_fmt_autosave = 1
-let g:go_highlight_fields = 1
-let g:neocomplete#enable_at_startup = 1
