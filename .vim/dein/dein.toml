@@ -1,3 +1,4 @@
 [[plugins]]
 repo = 'skanehira/preview-markdown.vim'
 repo = 'gabrielelana/vim-markdown'
+repo = 'leafgarland/typescript-vim'
