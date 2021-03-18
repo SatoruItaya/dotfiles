@@ -1,0 +1,6 @@
+.DS_Store
+*.swp
+*override.tf
+.terraform/
+.tmp.tfstate*
+.envrc
