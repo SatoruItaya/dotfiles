@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-IGNORE_PATTERN="^\.(git)"
+IGNORE_PATTERN="^\.(git)$"
 
 for dotfile in .??*; do
     [[ $dotfile =~ $IGNORE_PATTERN ]] && continue
