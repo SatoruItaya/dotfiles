@@ -20,7 +20,7 @@ if dein#load_state(s:dein_dir)
  call dein#begin(s:dein_dir)
 
  " .toml file
- let s:rc_dir = expand('~/.vim/dein') 
+ let s:rc_dir = expand('~/.dein') 
  let s:toml = s:rc_dir . '/dein.toml'
  let s:lazy_toml = s:rc_dir . '/dein_lazy.toml' 
 
