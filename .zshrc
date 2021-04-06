@@ -225,3 +225,6 @@ export PATH=/usr/local/Cellar/openssl@1.1/1.1.1i/bin:$PATH
 # direnv
 export EDITOR="vim"
 eval "$(direnv hook zsh)"
+
+# node
+export PATH=$HOME/.nodebrew/current/bin:$PATH
