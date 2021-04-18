@@ -192,6 +192,8 @@ eval "$(pyenv init -)"
 # kubecolor
 alias kubectl="kubecolor"
 alias k="kubecolor"
+autoload bashcompinit
+bashcompinit
 complete -o default -F __start_kubectl k
 
 # kube-ps1
