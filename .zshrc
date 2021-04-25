@@ -218,8 +218,7 @@ export PATH=$PATH:$HOME/bin
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #Go
-export GOPATH="$HOME/go"
-export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:/usr/local/go/bin"
 
 #OpenSSL
 export PATH=/usr/local/Cellar/openssl@1.1/1.1.1i/bin:$PATH
