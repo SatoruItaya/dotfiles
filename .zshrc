@@ -104,14 +104,16 @@ setopt extended_glob
 # historyコマンドは履歴に登録しない
 setopt hist_no_store
 
+# 履歴検索
+function peco-history-selection() {
+    BUFFER=`history -n 1 | tail -r  | awk '!a[$0]++' | peco`
+    CURSOR=$#BUFFER
+    zle reset-prompt
+}
 
-########################################
-# キーバインド
+zle -N peco-history-selection
+bindkey '^R' peco-history-selection
 
-# ^R で履歴検索をするときに * でワイルドカードを使用出来るようにする
-bindkey '^R' history-incremental-pattern-search-backward
-
-########################################
 # エイリアス
 
 alias la='ls -a'
@@ -229,3 +231,4 @@ eval "$(direnv hook zsh)"
 
 # node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
