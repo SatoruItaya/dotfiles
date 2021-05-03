@@ -2,5 +2,6 @@
 *.swp
 *override.tf
 .terraform/
+terraform.tfvars
 .tmp.tfstate*
 .envrc
