@@ -134,6 +134,9 @@ set shortmess-=S
 "Backspace
 set backspace=indent,eol,start
 
+"Shell
+set shell=zsh
+
 "lanugage
 language en_US.UTF-8
 
