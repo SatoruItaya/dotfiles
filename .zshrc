@@ -184,8 +184,7 @@ RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.local/bin"
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 # kubectl_aliases
@@ -232,3 +231,4 @@ eval "$(direnv hook zsh)"
 # node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+eval "$(pyenv init -)"
