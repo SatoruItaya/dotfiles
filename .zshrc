@@ -230,5 +230,3 @@ eval "$(direnv hook zsh)"
 
 # node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
-
-eval "$(pyenv init -)"
