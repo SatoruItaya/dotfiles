@@ -216,7 +216,7 @@ complete -o nospace -C /usr/local/Cellar/tfenv/1.0.2/versions/0.12.6/terraform t
 complete -o nospace -C /usr/local/Cellar/tfenv/1.0.2/versions/0.11.14/terraform terraform
 export PATH=$PATH:$HOME/bin
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions.zsh
 
 #Go
 export PATH="$PATH:/usr/local/go/bin"
