@@ -230,3 +230,6 @@ eval "$(direnv hook zsh)"
 
 # node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+
+# pip
+export PATH=/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH
