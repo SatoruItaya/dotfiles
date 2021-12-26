@@ -216,7 +216,7 @@ complete -o nospace -C /usr/local/Cellar/tfenv/1.0.2/versions/0.12.6/terraform t
 complete -o nospace -C /usr/local/Cellar/tfenv/1.0.2/versions/0.11.14/terraform terraform
 export PATH=$PATH:$HOME/bin
 
-source ~/.zsh/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #Go
 export PATH="$PATH:/usr/local/go/bin"
@@ -231,5 +231,21 @@ eval "$(direnv hook zsh)"
 # node
 export PATH=$HOME/.nodebrew/current/bin:$PATH
 
+# nvm + Node.js
+export NVM_DIR=~/.nvm
+
 # pip
 export PATH=/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH
+
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# Java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/itaya.satoru/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/itaya.satoru/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/itaya.satoru/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/itaya.satoru/google-cloud-sdk/completion.zsh.inc'; fi
