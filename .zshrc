@@ -243,9 +243,3 @@ eval "$(rbenv init -)"
 
 # Java
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/itaya.satoru/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/itaya.satoru/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/itaya.satoru/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/itaya.satoru/google-cloud-sdk/completion.zsh.inc'; fi
