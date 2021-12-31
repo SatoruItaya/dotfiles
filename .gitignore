@@ -3,5 +3,6 @@
 *override.tf
 .terraform/
 terraform.tfvars
+terraform.backend
 .tmp.tfstate*
 .envrc
