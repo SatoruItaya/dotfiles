@@ -181,14 +181,10 @@ precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
 
 # https://gist.github.com/mollifier/4979906
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/.local/bin"
-
-# homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.local/bin"
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 
 # kubectl_aliases
@@ -202,7 +198,7 @@ bashcompinit
 complete -o default -F __start_kubectl k
 
 # kube-ps1
-source /opt/homebrew/opt/kube-ps1/share/kube-ps1.sh
+source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
 PS1='$(kube_ps1)'$PS1
 kubeoff
 
@@ -220,7 +216,7 @@ complete -o nospace -C /usr/local/Cellar/tfenv/1.0.2/versions/0.12.6/terraform t
 complete -o nospace -C /usr/local/Cellar/tfenv/1.0.2/versions/0.11.14/terraform terraform
 export PATH=$PATH:$HOME/bin
 
-source ~/.zsh/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #Go
 export PATH="$PATH:/usr/local/go/bin"
@@ -244,3 +240,6 @@ export PATH=/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+# Java
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
