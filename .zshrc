@@ -245,3 +245,6 @@ export PATH=/Library/Frameworks/Python.framework/Versions/3.7/bin:$PATH
 # rbenv
 export PATH="$HOME/.rbenv/shims:$PATH"
 eval "$(rbenv init -)"
+
+# GitHub Signing commits
+export GPG_TTY=$(tty)
